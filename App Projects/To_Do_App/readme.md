@@ -1,8 +1,12 @@
 # todoapp
 
-A new Flutter project.
+All Crud operations included.
 
-## Getting Started
+## Create
+## Read
+## Update
+## Delete
+
 
 This project is a starting point for a Flutter application.
 
