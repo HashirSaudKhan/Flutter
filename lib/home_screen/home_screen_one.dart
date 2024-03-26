@@ -125,12 +125,18 @@ class Home_Screen_One extends StatelessWidget {
                       height: 2,
                       color: const Color(0xffFFA451),
                     ),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       //mainAxisSize: MainAxisSize.min,
                       children: [
-                        HoneyLimeCombo_BerryMangoCombo(),
-                        HoneyLimeCombo_BerryMangoCombo()
+                        HoneyLimeCombo_BerryMangoCombo(
+                            txtName: "Honey lime combo",
+                            imageAssets: Image.asset(
+                                'assets/images/Honey-Lime-Peach-Fruit-Salad-3-725x725-1-removebg-preview 1.png')),
+                        HoneyLimeCombo_BerryMangoCombo(
+                            txtName: "Berry mango combo",
+                            imageAssets: Image.asset(
+                                'assets/images/Glowing-Berry-Fruit-Salad.png'))
                       ],
                     )
                   ],

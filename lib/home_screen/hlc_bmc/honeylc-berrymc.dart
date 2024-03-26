@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class HoneyLimeCombo_BerryMangoCombo extends StatelessWidget {
-  const HoneyLimeCombo_BerryMangoCombo({super.key});
+  final String txtName;
+  final Image imageAssets;
+  const HoneyLimeCombo_BerryMangoCombo(
+      {super.key, required this.txtName, required this.imageAssets});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +22,7 @@ class HoneyLimeCombo_BerryMangoCombo extends StatelessWidget {
                   height: 130,
                   width: 120,
                   color: Colors.pink[400],
-                  child: Image.asset(
-                      'assets/images/Honey-Lime-Peach-Fruit-Salad-3-725x725-1-removebg-preview 1.png')),
+                  child: imageAssets),
               Container(
                 height: 40,
                 width: 40,
@@ -29,15 +31,14 @@ class HoneyLimeCombo_BerryMangoCombo extends StatelessWidget {
               ),
             ],
           ),
-          const Text(
-            "Honey lime combo",
-            style: TextStyle(fontSize: 15),
+          Text(
+            txtName,
+            style: const TextStyle(fontSize: 15),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
-                  child: Row(children: [
+              Row(children: [
                 Image.asset('assets/images/N.png'),
                 const Text(
                   "2,000",
@@ -45,7 +46,7 @@ class HoneyLimeCombo_BerryMangoCombo extends StatelessWidget {
                     color: Color(0xffF08626),
                   ),
                 )
-              ])),
+              ]),
               const CircleAvatar(
                 radius: 15,
                 backgroundColor: Color(0xffFFF2E7),
