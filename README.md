@@ -1,6 +1,6 @@
 # figma_app
 
-A new Flutter project.
+A Food App Flutter project.
 
 ## Getting Started
 
