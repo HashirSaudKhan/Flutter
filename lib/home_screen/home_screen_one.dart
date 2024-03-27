@@ -54,7 +54,7 @@ class Home_Screen_One extends StatelessWidget {
                 //width: double.infinity,
                 //decoration: const BoxDecoration(color: Colors.pinkAccent),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
                       decoration: BoxDecoration(
