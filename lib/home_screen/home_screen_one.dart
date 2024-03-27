@@ -12,7 +12,7 @@ class Home_Screen_One extends StatelessWidget {
       drawer: const Drawer(child: mydrawer()),
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.only(left: 20),
+          padding: const EdgeInsets.only(left: 20, top: 20),
           child: Column(
             children: [
               ListTile(
@@ -48,13 +48,13 @@ class Home_Screen_One extends StatelessWidget {
                 ),
               ),
               Container(
+                margin: const EdgeInsets.only(top: 20),
                 height: 50,
-                width: 350,
+                width: 400,
                 //width: double.infinity,
-                decoration: const BoxDecoration(color: Colors.pinkAccent),
-                //margin: const EdgeInsets.all(20),
+                //decoration: const BoxDecoration(color: Colors.pinkAccent),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
                       decoration: BoxDecoration(
@@ -84,9 +84,10 @@ class Home_Screen_One extends StatelessWidget {
                 ),
               ),
               Container(
+                margin: EdgeInsets.only(top: 20, bottom: 20),
                 width: double.infinity,
                 height: 50,
-                color: const Color.fromARGB(255, 31, 176, 196),
+                color: const Color(0xffFAFAFA),
                 child: const SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -109,7 +110,7 @@ class Home_Screen_One extends StatelessWidget {
               ),
               Container(
                 margin: const EdgeInsets.only(right: 20),
-                color: Colors.pink[50],
+                //color: Colors.pink[50],
                 width: double.infinity,
                 height: 250,
                 child: Column(
@@ -120,7 +121,7 @@ class Home_Screen_One extends StatelessWidget {
                       style: TextStyle(fontSize: 19, color: Color(0xff27214D)),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(bottom: 15),
+                      margin: const EdgeInsets.only(bottom: 15, top: 5),
                       width: 60,
                       height: 2,
                       color: const Color(0xffFFA451),
@@ -131,16 +132,97 @@ class Home_Screen_One extends StatelessWidget {
                       children: [
                         HoneyLimeCombo_BerryMangoCombo(
                             txtName: "Honey lime combo",
+                            txtrate: "2,000",
+                            bgItemColor: const Color(0xffFFFFFF),
                             imageAssets: Image.asset(
                                 'assets/images/Honey-Lime-Peach-Fruit-Salad-3-725x725-1-removebg-preview 1.png')),
                         HoneyLimeCombo_BerryMangoCombo(
                             txtName: "Berry mango combo",
+                            txtrate: "2,000",
+                            bgItemColor: const Color(0xffFFFFFF),
                             imageAssets: Image.asset(
                                 'assets/images/Glowing-Berry-Fruit-Salad.png'))
                       ],
                     )
                   ],
                 ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 20),
+                //color: Colors.blue[50],
+                width: double.infinity,
+                height: 260,
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          const Text(
+                            "Hottest",
+                            style: TextStyle(
+                                color: Color(0xff27214D), fontSize: 19),
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Text(
+                            "Popular",
+                            style: TextStyle(
+                                color: Colors.grey[400], fontSize: 19),
+                          ),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Text(
+                            "New Combo",
+                            style: TextStyle(
+                                color: Colors.grey[400], fontSize: 19),
+                          )
+                        ],
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 15, top: 5),
+                        width: 45,
+                        height: 2,
+                        color: const Color(0xffFFA451),
+                      ),
+                      // Container(
+                      //   color: Colors.amberAccent,
+                      //   height: 190,
+                      //   width: double.infinity,
+                      // )
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            HoneyLimeCombo_BerryMangoCombo(
+                                txtName: "Quinoa fruit salad",
+                                txtrate: "10,000",
+                                bgItemColor: const Color(0xffFFFCF2),
+                                imageAssets: Image.asset(
+                                    'assets/images/Best-Ever-Tropical-Fruit-Salad (2).png')),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            HoneyLimeCombo_BerryMangoCombo(
+                                txtName: "Tropical fruit salad",
+                                txtrate: "10,000",
+                                bgItemColor: const Color(0xffFEF4F4),
+                                imageAssets: Image.asset(
+                                    'assets/images/Best-Ever-Tropical-Fruit-Salad (1).png')),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            HoneyLimeCombo_BerryMangoCombo(
+                                txtName: "Melon fruit salad",
+                                txtrate: "10,000",
+                                bgItemColor: const Color(0xffF1EFF6),
+                                imageAssets: Image.asset(
+                                    'assets/images/Honey-Lime-Peach-Fruit-Salad-3-725x725-1-removebg-preview 1.png')),
+                          ],
+                        ),
+                      )
+                    ]),
               )
             ],
           ),
