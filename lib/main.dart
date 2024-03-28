@@ -1,4 +1,5 @@
-import "package:figma_app/home_screen/home_screen_one.dart";
+import "package:figma_app/add_to_basket/add_to_screen.dart";
+//import "package:figma_app/home_screen/home_screen_one.dart";
 import "package:flutter/material.dart";
 
 void main() {
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home_Screen_One(),
+      home: AddToBasket(),
+      //Home_Screen_One(),
     );
   }
 }

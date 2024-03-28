@@ -186,11 +186,6 @@ class Home_Screen_One extends StatelessWidget {
                         height: 2,
                         color: const Color(0xffFFA451),
                       ),
-                      // Container(
-                      //   color: Colors.amberAccent,
-                      //   height: 190,
-                      //   width: double.infinity,
-                      // )
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
