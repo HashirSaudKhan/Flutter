@@ -1,6 +1,7 @@
 import 'package:figma_app/add_to_basket/combo_items/combo_items.dart';
 import 'package:figma_app/backbutton.dart';
 import 'package:figma_app/custom_buttons.dart';
+import 'package:figma_app/orderlist_screen.dart';
 import 'package:flutter/material.dart';
 
 class AddToBasket extends StatelessWidget {
@@ -130,17 +131,28 @@ class AddToBasket extends StatelessWidget {
                         style: TextStyle(color: Color(0xff333333)),
                       ),
                     ),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        CircleAvatar(
+                        const CircleAvatar(
                           radius: 24,
                           backgroundImage:
                               AssetImage('assets/images/Group 27.png'),
                         ),
                         SizedBox(
                             width: 250,
-                            child: Custom_Button(btn_name: "Add To Basket"))
+                            child: InkWell(
+                              child: const Custom_Button(
+                                  btn_name: "Add To Basket"),
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          const OrderListScreen(),
+                                    ));
+                              },
+                            ))
                       ],
                     )
                   ],
