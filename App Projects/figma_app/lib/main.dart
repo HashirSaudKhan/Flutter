@@ -1,4 +1,4 @@
-import "package:figma_app/orderlist_screen.dart";
+import "package:figma_app/order_list_screen/orderlistscreen.dart";
 import "package:flutter/material.dart";
 
 void main() {

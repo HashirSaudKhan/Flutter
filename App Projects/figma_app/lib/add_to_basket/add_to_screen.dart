@@ -1,7 +1,7 @@
 import 'package:figma_app/add_to_basket/combo_items/combo_items.dart';
 import 'package:figma_app/backbutton.dart';
 import 'package:figma_app/custom_buttons.dart';
-import 'package:figma_app/orderlist_screen.dart';
+import 'package:figma_app/order_list_screen/orderlistscreen.dart';
 import 'package:flutter/material.dart';
 
 class AddToBasket extends StatelessWidget {
