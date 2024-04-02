@@ -1,5 +1,6 @@
 import 'package:figma_app/backbutton.dart';
 import 'package:figma_app/custom_buttons.dart';
+import 'package:figma_app/order_complete_screen/order_comp_screen.dart';
 import 'package:figma_app/order_list_screen/orderlistitems.dart';
 import 'package:flutter/material.dart';
 
@@ -79,8 +80,18 @@ class OrderListScreen extends StatelessWidget {
                   )
                 ],
               ),
-              const SizedBox(
-                  width: 230, child: Custom_Button(btn_name: "Checkout"))
+              SizedBox(
+                  width: 230,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const OrderCompleteScreen()));
+                    },
+                    child: const Custom_Button(btn_name: "Checkout"),
+                  ))
             ],
           ),
         )
