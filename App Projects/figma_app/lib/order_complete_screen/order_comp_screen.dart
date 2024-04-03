@@ -1,4 +1,7 @@
 import 'package:figma_app/custom_buttons.dart';
+
+import 'package:figma_app/custom_btn.dart';
+import 'package:figma_app/order_complete_screen/add_card_dialog.dart';
 import 'package:flutter/material.dart';
 
 class OrderCompleteScreen extends StatelessWidget {
@@ -31,19 +34,14 @@ class OrderCompleteScreen extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 40, bottom: 20),
                 width: 230.0,
                 child: const Custom_Button(btn_name: "Track order")),
-            Container(
-              width: 200,
-              height: 50,
-              decoration: BoxDecoration(
-                  color: const Color(0xffFCF6F0),
-                  borderRadius: BorderRadius.circular(12)),
-              child: const Center(
-                  child: Text(
-                "Continue shopping",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold, color: Color(0xffFFA451)),
-              )),
-            )
+            InkWell(
+                onTap: () {
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) => const AddCardDialog());
+                },
+                child: const CustomBtn2(
+                    txtbutton: "Continue shopping", btnwidth: 200))
           ],
         ),
       ),
