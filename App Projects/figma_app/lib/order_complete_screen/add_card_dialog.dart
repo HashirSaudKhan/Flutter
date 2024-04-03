@@ -1,5 +1,6 @@
 import 'package:figma_app/custom_buttons.dart';
 import 'package:figma_app/custom_text_field.dart';
+import 'package:figma_app/order_complete_screen/deliverydetailsdialog.dart';
 import 'package:flutter/material.dart';
 
 class AddCardDialog extends StatelessWidget {
@@ -17,27 +18,27 @@ class AddCardDialog extends StatelessWidget {
         color: Colors.white,
         height: 411,
         width: double.infinity,
-        child: const Padding(
-          padding: EdgeInsets.all(10.0),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
           child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Card holder’s name",
                   style: TextStyle(fontSize: 16),
                 ),
-                CustomTextField(
+                const CustomTextField(
                   txtHint: "10th avenue, Lekki, Lagos.",
                   rangewidth: double.infinity,
                 ),
-                Text(
+                const Text(
                   "Card number",
                   style: TextStyle(fontSize: 16),
                 ),
-                CustomTextField(
+                const CustomTextField(
                     rangewidth: double.infinity, txtHint: "09090909090"),
-                Row(
+                const Row(
                   children: [
                     Text("Date"),
                     SizedBox(
@@ -46,7 +47,7 @@ class AddCardDialog extends StatelessWidget {
                     Text("CVV")
                   ],
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CustomTextField(txtHint: "MM/YY", rangewidth: 130),
@@ -56,7 +57,15 @@ class AddCardDialog extends StatelessWidget {
                 Center(
                   child: SizedBox(
                       width: 213,
-                      child: Custom_Button(btn_name: "Complete order")),
+                      child: InkWell(
+                          onTap: () {
+                            showDialog(
+                                context: context,
+                                builder: (context) =>
+                                    const DeliveryDetailsDialog());
+                          },
+                          child:
+                              const Custom_Button(btn_name: "Complete order"))),
                 )
               ]),
         ),
