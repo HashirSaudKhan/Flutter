@@ -1,3 +1,4 @@
+import "package:dotted_line/dotted_line.dart";
 import "package:figma_app/backbutton.dart";
 import "package:flutter/material.dart";
 
@@ -31,9 +32,11 @@ class OrderLastListScreen extends StatelessWidget {
             ),
           ),
           Container(
+            padding: const EdgeInsets.only(top: 40),
             height: MediaQuery.of(context).size.height * 0.85,
             //color: Colors.deepPurple[50],
-            child: ListView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const ListTile(
                   leading:
@@ -43,6 +46,21 @@ class OrderLastListScreen extends StatelessWidget {
                     Icons.check_circle,
                     color: Colors.green,
                     size: 35,
+                  ),
+                ),
+                //Dotted Line
+                Container(
+                  padding: const EdgeInsets.only(left: 20),
+                  width: 70,
+                  height: 60,
+                  child: const Center(
+                    child: DottedLine(
+                      alignment: WrapAlignment.center,
+                      lineThickness: 2,
+                      lineLength: 60,
+                      direction: Axis.vertical,
+                      dashColor: Color(0xffFFA451),
+                    ),
                   ),
                 ),
                 const ListTile(
@@ -55,6 +73,21 @@ class OrderLastListScreen extends StatelessWidget {
                     size: 35,
                   ),
                 ),
+                //Dotted Line
+                Container(
+                  padding: const EdgeInsets.only(left: 20),
+                  width: 70,
+                  height: 60,
+                  child: const Center(
+                    child: DottedLine(
+                      alignment: WrapAlignment.center,
+                      lineThickness: 2,
+                      lineLength: 60,
+                      direction: Axis.vertical,
+                      dashColor: Color(0xffFFA451),
+                    ),
+                  ),
+                ),
                 ListTile(
                     leading: const Image(
                         image: AssetImage('assets/images/Frame 11917.png')),
@@ -65,7 +98,40 @@ class OrderLastListScreen extends StatelessWidget {
                     ),
                     trailing: const Image(
                         image: AssetImage('assets/images/Group 50.png'))),
-                Image.asset('assets/images/map.png'),
+                //Dotted Line
+                Container(
+                  padding: const EdgeInsets.only(left: 20),
+                  width: 70,
+                  height: 60,
+                  child: const Center(
+                    child: DottedLine(
+                      alignment: WrapAlignment.center,
+                      lineThickness: 2,
+                      lineLength: 60,
+                      direction: Axis.vertical,
+                      dashColor: Color(0xffFFA451),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30.0),
+                  child: Image.asset('assets/images/map.png'),
+                ),
+                //Dotted Line
+                Container(
+                  padding: const EdgeInsets.only(left: 20),
+                  width: 70,
+                  height: 60,
+                  child: const Center(
+                    child: DottedLine(
+                      alignment: WrapAlignment.center,
+                      lineThickness: 2,
+                      lineLength: 60,
+                      direction: Axis.vertical,
+                      dashColor: Color(0xffFFA451),
+                    ),
+                  ),
+                ),
                 const ListTile(
                   leading: Icon(
                     Icons.check_circle,
