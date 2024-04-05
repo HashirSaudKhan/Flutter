@@ -1,7 +1,6 @@
 import 'package:figma_app/custom_buttons.dart';
 
 import 'package:figma_app/custom_btn.dart';
-import 'package:figma_app/order_complete_screen/add_card_dialog.dart';
 import 'package:figma_app/order_complete_screen/deliverydetailsdialog.dart';
 import 'package:figma_app/order_list_last_screen/orderlistlastscreen.dart';
 import 'package:flutter/material.dart';
@@ -47,6 +46,7 @@ class OrderCompleteScreen extends StatelessWidget {
             InkWell(
                 onTap: () {
                   showDialog(
+                      barrierDismissible: false,
                       context: context,
                       builder: (BuildContext context) =>
                           const DeliveryDetailsDialog());

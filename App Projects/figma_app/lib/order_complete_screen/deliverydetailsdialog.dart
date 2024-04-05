@@ -18,6 +18,15 @@ class DeliveryDetailsDialog extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Icon(
+                  Icons.close,
+                  color: Colors.red,
+                )
+              ],
+            ),
             const Text("Your delivery address"),
             const CustomTextField(
                 txtHint: "10th avenue, Lekki, Lagos.",
@@ -41,6 +50,7 @@ class DeliveryDetailsDialog extends StatelessWidget {
                 InkWell(
                     onTap: () {
                       showDialog(
+                          barrierDismissible: false,
                           context: context,
                           builder: (context) => const AddCardDialog());
                     },

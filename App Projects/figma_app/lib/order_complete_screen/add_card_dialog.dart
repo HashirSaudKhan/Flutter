@@ -1,6 +1,5 @@
 import 'package:figma_app/custom_buttons.dart';
 import 'package:figma_app/custom_text_field.dart';
-import 'package:figma_app/order_complete_screen/deliverydetailsdialog.dart';
 import 'package:figma_app/order_list_last_screen/orderlistlastscreen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,7 @@ class AddCardDialog extends StatelessWidget {
       ),
       child: Container(
         color: Colors.white,
-        height: 411,
+        height: 422,
         width: double.infinity,
         child: Padding(
           padding: const EdgeInsets.all(10.0),
@@ -25,6 +24,20 @@ class AddCardDialog extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // Close button
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Icon(
+                          Icons.close,
+                          color: Colors.red,
+                        ))
+                  ],
+                ),
                 const Text(
                   "Card holder’s name",
                   style: TextStyle(fontSize: 16),
@@ -54,6 +67,9 @@ class AddCardDialog extends StatelessWidget {
                     CustomTextField(txtHint: "MM/YY", rangewidth: 130),
                     CustomTextField(txtHint: "MM/YY", rangewidth: 130)
                   ],
+                ),
+                const SizedBox(
+                  height: 5,
                 ),
                 Center(
                   child: SizedBox(
