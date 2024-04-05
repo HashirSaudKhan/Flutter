@@ -1,6 +1,7 @@
 import 'package:figma_app/custom_buttons.dart';
 import 'package:figma_app/custom_text_field.dart';
 import 'package:figma_app/order_complete_screen/deliverydetailsdialog.dart';
+import 'package:figma_app/order_list_last_screen/orderlistlastscreen.dart';
 import 'package:flutter/material.dart';
 
 class AddCardDialog extends StatelessWidget {
@@ -59,10 +60,11 @@ class AddCardDialog extends StatelessWidget {
                       width: 213,
                       child: InkWell(
                           onTap: () {
-                            showDialog(
-                                context: context,
-                                builder: (context) =>
-                                    const DeliveryDetailsDialog());
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const OrderLastListScreen()));
                           },
                           child:
                               const Custom_Button(btn_name: "Complete order"))),
